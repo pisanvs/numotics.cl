@@ -5,17 +5,46 @@
   <title>numotics - Landing</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
   <script src="https://kit.fontawesome.com/10b69fe630.js" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="container-lg d-flex align-items-center" style="height: 100vh;">
+    <div class="card">
+      <h1 class="title"><span style="color: #df7f34;">nu</span>|motics</h1>
+      <div class="pre">
+          <h2 style="font-weight: lighter; font-size: inherit;">Nueva web próximamente!</h2>
+      </div>
+      <div class="row contact-info">
+        <div class="col-sm-6">
+          <p>
+            Email:<br/>
+            <a href="mailto:hola@numotics.cl" class="link">hola@numotics.cl</a>
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <span>Instagram:</span><br>
+          <a href="//instagram.com/numotics" class="link"><i class="fa-brands fa-instagram"></i> <span>/numotics</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js"></script>
   <style>
     /* Add CSS styles for the animated gradient background */
+    * {
+      /* font-size: inherit; */
+    }
+
     body {
       background: linear-gradient(62deg, rgb(21, 213, 235) 0.00%, rgb(255, 0, 191) 100.00%);
       background-size: 500% 500%;
       animation: gradient 15s ease infinite;
-      height: 100vh;
+      height: 100%;
     }
 
     html {
       background-color: black;
+      font-size: calc(14px + 0.390625vw);;
     }
     
     @keyframes gradient {
@@ -29,7 +58,7 @@
         background-position: 0% 50%;
       }
     }
-    
+
     /* Add CSS styles for the black card */
     .card {
       background-color: rgba(0, 0, 0, 0.589);
@@ -37,49 +66,30 @@
       border-radius: 3px;
       padding: 20px;
       margin-top: 50px;
-      width: 30vw;
-      max-width: 500px;
+      width: calc(100% - 20vw);
       margin-left: auto;
       margin-right: auto;
       text-align: center;
       color: white;
       font-family: 'Roboto Mono', sans-serif;
-      font-size: 36px;
       font-weight: bold;
     }
     
     /* Add CSS styles for the contact info */
     .contact-info {
-      margin-top: 30px;
+      margin-top: 15px;
       font-weight: 200;
-      font-size: 18px;
     }
     
     .pre {
       font-weight: 200;
-      font-size: 18px;
-    }
-    
-    /* Add CSS styles for the Test button */
-    .btn-test {
-      display: block;
-      margin: 50px auto;
-      border: 2px solid white;
-      background-color: black;
-      color: white;
-      font-size: 24px;
-      font-weight: bold;
-      padding: 10px 20px;
-      border-radius: 20px;
-      text-align: center;
-      transition: all 0.5s ease;
-    }
-    
-    .btn-test:hover {
-      background-color: white;
-      color: black;
+      font-size: calc(12px + 0.390625vw);;
     }
 
+    h2 {
+      font-size: calc(20px + 0.390625vw);;
+    }
+    
     .link {
       color: white;
       transition: all 0.07s ease-in;
@@ -89,29 +99,22 @@
       color: black;
       transition: all 0.07s ease-in;
     }
+
+    .row {
+      display: flex;
+    }
+
+
+    @media screen and (max-width: 990px) {
+      .pre {
+        font-size: larger;
+      }
+
+      .row {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
   </style>
-</head>
-<body>
-  <div class="container d-flex align-items-center" style="height: 100vh;">
-    <div class="card">
-      <h1><span style="color: #df7f34;">nu</span>motics</h1>
-      <div class="pre">
-          <h2 style="font-weight: lighter;">Nueva web próximamente!</h2>
-      </div>
-      <div class="row contact-info">
-        <div class="col-sm-6">
-          <p>
-            Email:<br/>
-            <a href="mailto:contact@numotics.cl" class="link">contact@numotics.cl</a>
-          </p>
-        </div>
-        <div class="col-sm-6">
-          <span>Instagram:</span><br>
-          <a href="//instagram.com/numotics" class="link"><i class="fa-brands fa-instagram"></i> <span>/numotics</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.min.js"></script>
 </body>
 </html>
