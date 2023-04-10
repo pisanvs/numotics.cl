@@ -37,13 +37,34 @@
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MQZFQ8F" height="0" width="0"
       style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
+  <script>
+    window.addEventListener("load", function () {
+      const form = document.getElementById('budgetform');
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const action = e.target.action;
+        fetch(action, {
+          method: 'POST',
+          body: data,
+        })
+          .then(() => {
+            window.location.pathname = "thanks.html"
+          })
+      });
+    });
+  </script>
+
   <div class="container-lg d-flex align-items-center" style="height: 100vh;">
     <div class="card">
       <h1 class="title"><span style="color: #df7f34;">nu</span>|motics</h1>
       <div class="pre">
         <h2 style="font-weight: lighter; font-size: inherit;">Formulario cotización:</h2>
       </div>
-      <form action="post" class="contact-info">
+      <form
+        action="https://script.google.com/macros/s/AKfycbwEA9DFvf272Ebwd3YGYdtEnNMSfbrZNxBfl1Q_N9T8k6ZK3jJUiaz7FGPfn5n67_ac/exec"
+        method="post" class="contact-info" id="budgetform">
         <div class="row contact-info">
           <div class="col-sm-6">
             <p>
@@ -71,31 +92,28 @@
           <div class="col-sm-12">
             <label for="">¿Qué buscas automatizar en tu vivienda? <span style="font-size: smaller;">(si representas a un
                 negocio, contactate via <a class="link" style="text-decoration: underline;"
-                  href="mailto:hola@numotics.cl">correo</a>)</span></label>
+                  href="mailto:hola@numotics.cl">correo</a>)</span></label><br>
             <textarea name="automations" id="text-1" cols="30" rows="3"
               placeholder="Cosas como: iluminación, climatización, control de acceso, camaras, etc."></textarea>
           </div>
         </div>
         <div class="row">
           <div class="col-sm-12">
-            <label for="">¿Dónde planeas hacer las instalaciones?</label>
-            <textarea name="where" id="text-1" cols="30" rows="3"
-              placeholder="Ej.: 3 Dormitorios, Living, Cocina..."></textarea>
-          </div>
-        </div>
-        
-        <div class="row">
-          <div class="col-sm-12">
-            <label for="">¿Algún detalle a considerar?</label>
+            <label for="">¿Dónde planeas hacer las instalaciones?</label><br>
             <textarea name="where" id="text-1" cols="30" rows="3"
               placeholder="Ej.: 3 Dormitorios, Living, Cocina..."></textarea>
           </div>
         </div>
 
         <div class="row">
-          <div class="btn-test">
-            <a href="" class="link">ENVIAR</a>
+          <div class="col-sm-12">
+            <label for="">¿Algún detalle a considerar?</label><br>
+            <textarea name="details" id="text-1" cols="30" rows="3" placeholder=""></textarea>
           </div>
+        </div>
+
+        <div class="row">
+          <button class="btn-test">ENVIAR</button>
         </div>
       </form>
     </div>
